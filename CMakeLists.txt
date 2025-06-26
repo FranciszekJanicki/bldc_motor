@@ -4,10 +4,8 @@ target_sources(bldc_motor PRIVATE
     "bldc_motor.c"
 )
 
-target_include_directories(bldc_motor PRIVATE 
-)
-
-target_link_libraries(bldc_motor PRIVATE
+target_include_directories(bldc_motor PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 target_compile_options(bldc_motor PUBLIC
