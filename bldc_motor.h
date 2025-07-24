@@ -20,7 +20,9 @@ bldc_motor_err_t bldc_motor_deinitialize(bldc_motor_t* bldc_motor);
 bldc_motor_err_t bldc_motor_commutation(bldc_motor_t* bldc_motor,
                                         bldc_motor_direction_t direction,
                                         uint32_t compare);
-bldc_motor_err_t bldc_motor_commutation_forward(bldc_motor_t* bldc_motor, uint32_t compare);
-bldc_motor_err_t bldc_motor_commutation_backward(bldc_motor_t* bldc_motor, uint32_t compare);
+bldc_motor_err_t bldc_motor_commutation_forward(bldc_motor_t* bldc_motor,
+                                                uint32_t compare);
+bldc_motor_err_t bldc_motor_commutation_backward(bldc_motor_t* bldc_motor,
+                                                 uint32_t compare);
 
 #endif // BLDC_MOTOR_BLDC_MOTOR_H
