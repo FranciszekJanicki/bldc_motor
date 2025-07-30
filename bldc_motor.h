@@ -3,6 +3,10 @@
 
 #include "bldc_motor_config.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct {
     bldc_motor_config_t config;
     bldc_motor_interface_t interface;
@@ -24,5 +28,9 @@ bldc_motor_err_t bldc_motor_commutation_forward(bldc_motor_t* bldc_motor,
                                                 uint32_t compare);
 bldc_motor_err_t bldc_motor_commutation_backward(bldc_motor_t* bldc_motor,
                                                  uint32_t compare);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // BLDC_MOTOR_BLDC_MOTOR_H

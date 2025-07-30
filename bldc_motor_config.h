@@ -3,6 +3,10 @@
 
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef enum {
     BLDC_MOTOR_ERR_OK = 0,
     BLDC_MOTOR_ERR_FAIL = 1 << 0,
@@ -53,5 +57,9 @@ typedef struct {
     bldc_motor_err_t (*pwm_stop)(void*, bldc_motor_channel_t);
     bldc_motor_err_t (*pwm_set_compare)(void*, bldc_motor_channel_t, uint32_t);
 } bldc_motor_interface_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // BLDC_MOTOR_BLDC_MOTOR_CONFIG_H
